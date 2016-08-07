@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1049119462742",
+    "firebase_url": "https://coursetrack-153ce.firebaseio.com",
+    "project_id": "coursetrack-153ce",
+    "storage_bucket": "coursetrack-153ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049119462742:android:dd28096054f07335",
+        "android_client_info": {
+          "package_name": "io.github.angiecho.coursetrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049119462742-it0m31drab2hchhtih0ujdtnjlbajfup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqaGoc5PG0gzt4Fe6PvgiOXKjvNwIt1JM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
