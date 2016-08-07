@@ -1,4 +1,4 @@
-package com.example.coursetrack;
+package io.github.angiecho.coursetrack;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

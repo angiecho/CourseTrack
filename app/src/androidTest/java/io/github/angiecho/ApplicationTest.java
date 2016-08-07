@@ -1,4 +1,4 @@
-package com.example.coursetrack;
+package io.github.angiecho.coursetrack;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package com.example.coursetrack;
+package io.github.angiecho.coursetrack;
 
 import org.junit.Test;
 
