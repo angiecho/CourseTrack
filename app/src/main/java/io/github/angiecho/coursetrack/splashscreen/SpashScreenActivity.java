@@ -1,14 +1,14 @@
 package io.github.angiecho.coursetrack.splashscreen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.github.angiecho.coursetrack.BaseActivity;
 import io.github.angiecho.coursetrack.R;
+import io.github.angiecho.coursetrack.login.EmailSignupActivity;
 
 public class SpashScreenActivity extends BaseActivity {
 
@@ -19,18 +19,19 @@ public class SpashScreenActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.viewCoursesButton)
+    @OnClick(R.id.view_courses_button)
     public void viewCourses(Button button) {
         button.setText("Hello!");
     }
 
-    @OnClick(R.id.googleSignUpButton)
+    @OnClick(R.id.google_signup_button)
     public void googleSignUp() {
         Toast.makeText(SpashScreenActivity.this, "Temporarily Unavailable", Toast.LENGTH_SHORT).show();
     }
 
-    @OnClick(R.id.regularSignUpButtton)
-    public void regularSignUp(TextView textView) {
-        textView.setText("Hello!");
+    @OnClick(R.id.email_signup_text)
+    public void emailSignUp() {
+        Intent intent = new Intent(this, EmailSignupActivity.class);
+        startActivity(intent);
     }
 }
