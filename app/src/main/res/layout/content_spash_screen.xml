@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Welcome to ECE"
+            android:id="@+id/welcomeText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Courses"
+            android:id="@+id/viewCoursesButton"
+            android:layout_below="@+id/welcomeText"
+            android:layout_alignParentStart="true"/>
+    <com.google.android.gms.common.SignInButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/googleSignUpButton"
+            android:layout_below="@+id/viewCoursesButton"
+            android:layout_alignParentStart="true"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click here to sign in with email"
+            android:id="@+id/regularSignUpButtton"
+            android:layout_below="@+id/googleSignUpButton"
+            android:layout_alignParentStart="true"/>
+</merge>
