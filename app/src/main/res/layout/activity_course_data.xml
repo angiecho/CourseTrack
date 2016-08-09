@@ -8,11 +8,6 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include
-        layout="@layout/app_bar_course_data"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -22,6 +17,6 @@
         app:headerLayout="@layout/nav_header_course_data"
         app:menu="@menu/activity_course_data_drawer" />
 
-
+    <include layout="@layout/app_bar_course_data"/>
 
 </android.support.v4.widget.DrawerLayout>

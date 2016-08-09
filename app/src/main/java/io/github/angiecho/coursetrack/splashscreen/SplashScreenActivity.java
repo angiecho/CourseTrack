@@ -2,7 +2,6 @@ package io.github.angiecho.coursetrack.splashscreen;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -11,7 +10,7 @@ import io.github.angiecho.coursetrack.R;
 import io.github.angiecho.coursetrack.coursedata.CourseDataActivity;
 import io.github.angiecho.coursetrack.login.EmailSignupActivity;
 
-public class SpashScreenActivity extends BaseActivity {
+public class SplashScreenActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +20,14 @@ public class SpashScreenActivity extends BaseActivity {
     }
 
     @OnClick(R.id.view_courses_button)
-    public void viewCourses(Button button) {
+    public void viewCourses() {
         Intent intent = new Intent(this, CourseDataActivity.class);
         startActivity(intent);
     }
 
     @OnClick(R.id.google_signup_button)
     public void googleSignUp() {
-        Toast.makeText(SpashScreenActivity.this, "Temporarily Unavailable", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Temporarily Unavailable", Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.email_signup_text)
