@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
+
     <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
         <ScrollView
                 android:id="@+id/signup_form"
@@ -25,9 +26,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Email"
+                            android:imeOptions="actionNext"
                             android:inputType="textEmailAddress"
                             android:maxLines="1"
-                            android:singleLine="true" />
+                            android:singleLine="true"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -40,12 +42,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Password"
-                            android:imeActionId="@+id/login"
-                            android:imeActionLabel="Sign in"
-                            android:imeOptions="actionUnspecified"
+                            android:imeActionId="@+id/signup"
+                            android:imeActionLabel="Done"
+                            android:imeOptions="actionDone"
                             android:inputType="textPassword"
                             android:maxLines="1"
-                            android:singleLine="true" />
+                            android:singleLine="true"/>
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -55,7 +57,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:text="Sign up"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 <TextView
                         android:id="@+id/email_signin_text"

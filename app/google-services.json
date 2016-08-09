@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1049119462742-rr896819qmnlcoovpgdjq9nl1vettkhu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.github.angiecho.coursetrack",
+            "certificate_hash": "C73B2A632D1E0E53DC00761D3EC5D898A9993477"
+          }
+        },
+        {
           "client_id": "1049119462742-it0m31drab2hchhtih0ujdtnjlbajfup.apps.googleusercontent.com",
           "client_type": 3
         }
