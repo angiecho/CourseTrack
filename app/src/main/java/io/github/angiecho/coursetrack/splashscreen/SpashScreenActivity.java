@@ -8,6 +8,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.github.angiecho.coursetrack.BaseActivity;
 import io.github.angiecho.coursetrack.R;
+import io.github.angiecho.coursetrack.coursedata.CourseDataActivity;
 import io.github.angiecho.coursetrack.login.EmailSignupActivity;
 
 public class SpashScreenActivity extends BaseActivity {
@@ -21,7 +22,8 @@ public class SpashScreenActivity extends BaseActivity {
 
     @OnClick(R.id.view_courses_button)
     public void viewCourses(Button button) {
-        button.setText("Hello!");
+        Intent intent = new Intent(this, CourseDataActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.google_signup_button)

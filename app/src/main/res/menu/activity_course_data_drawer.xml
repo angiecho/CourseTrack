@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_year_one"
+            android:title="Year One" />
+        <item
+            android:id="@+id/nav_year_two"
+            android:title="Year Two" />
+        <item
+            android:id="@+id/nav_year_three"
+            android:title="Year Three" />
+        <item
+            android:id="@+id/nav_year_four"
+            android:title="Year Four" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
