@@ -27,16 +27,16 @@ public class EmailSignInActivity extends EmailAuthActivity {
         finish();
     }
 
+    @Override
     @OnClick(R.id.email_signin_button)
-    public void emailSignIn() {
-        String email = getValidEmail();
-        String password = getValidPassword();
-        if(email != null && password != null) {
-            firebaseEmailSignIn(email, password);
-        }
+    public void emailAuth() {
+        super.emailAuth();
     }
 
-    private void firebaseEmailSignIn(String email, String password) {
+    @Override
+    protected void firebaseEmailAuth(String email, String password) {
+        super.firebaseEmailAuth(email, password);
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -54,6 +54,7 @@ public class EmailSignInActivity extends EmailAuthActivity {
                             Toast.makeText(EmailSignInActivity.this, "Authentication succeeded.",
                                     Toast.LENGTH_SHORT).show();
                         }
+                        showProgress(false);
                     }
                 });
     }
