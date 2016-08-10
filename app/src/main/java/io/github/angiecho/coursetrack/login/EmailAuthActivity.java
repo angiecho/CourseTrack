@@ -1,5 +1,6 @@
 package io.github.angiecho.coursetrack.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -13,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import io.github.angiecho.coursetrack.BaseActivity;
 import io.github.angiecho.coursetrack.R;
+import io.github.angiecho.coursetrack.coursedata.CourseDataActivity;
 
 /**
  * Created by andytung on 2016-08-09.

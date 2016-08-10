@@ -1,5 +1,6 @@
 package io.github.angiecho.coursetrack.login;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,7 +25,8 @@ public class EmailSignInActivity extends EmailAuthActivity {
 
     @OnClick(R.id.email_signup_text)
     public void redirectEmailSignUp() {
-        finish();
+        Intent intent = new Intent(this, EmailResetActivity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".login.LoginTaskDelegate">
         </activity>
+        <activity android:name=".login.EmailResetActivity">
+        </activity>
     </application>
 
 </manifest>

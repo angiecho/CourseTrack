@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import io.github.angiecho.coursetrack.BaseActivity;
 import io.github.angiecho.coursetrack.R;
 import io.github.angiecho.coursetrack.login.EmailSignUpActivity;
+import io.github.angiecho.coursetrack.splashscreen.SplashScreenActivity;
 
 public class NavigationDrawerActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -78,7 +79,8 @@ public class NavigationDrawerActivity extends BaseActivity implements Navigation
             startActivity(intent);
             return true;
         } else if (id == R.id.action_sign_out) {
-            Intent intent = new Intent(this, EmailSignUpActivity.class);
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(this, SplashScreenActivity.class);
             startActivity(intent);
             return true;
         }

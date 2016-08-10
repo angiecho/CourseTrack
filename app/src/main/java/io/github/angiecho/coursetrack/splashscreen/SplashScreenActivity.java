@@ -27,7 +27,7 @@ public class SplashScreenActivity extends BaseActivity {
 
     @OnClick(R.id.google_signup_button)
     public void googleSignUp() {
-        Toast.makeText(this, "Temporarily Unavailable", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Temporarily unavailable.", Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.email_signup_text)

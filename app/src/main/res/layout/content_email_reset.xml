@@ -45,7 +45,8 @@
 
                 <android.support.design.widget.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
 
                     <EditText
                             android:id="@+id/password_field"
@@ -62,18 +63,18 @@
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
-                        android:id="@+id/email_signin_button"
+                        android:id="@+id/email_reset_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="Sign in"
+                        android:text="Reset Password"
                         android:textStyle="bold"/>
 
                 <TextView
                         android:id="@+id/email_signup_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Forgot password? Click here to reset your password."/>
+                        android:text="Don't have an account? Click here to register."/>
 
 
             </LinearLayout>
