@@ -8,7 +8,7 @@ import butterknife.OnClick;
 import io.github.angiecho.coursetrack.BaseActivity;
 import io.github.angiecho.coursetrack.R;
 import io.github.angiecho.coursetrack.coursedata.CourseDataActivity;
-import io.github.angiecho.coursetrack.login.SignUpActivity;
+import io.github.angiecho.coursetrack.login.EmailSignUpActivity;
 
 public class SplashScreenActivity extends BaseActivity {
 
@@ -32,7 +32,7 @@ public class SplashScreenActivity extends BaseActivity {
 
     @OnClick(R.id.email_signup_text)
     public void emailSignUp() {
-        Intent intent = new Intent(this, SignUpActivity.class);
+        Intent intent = new Intent(this, EmailSignUpActivity.class);
         startActivity(intent);
     }
 }

@@ -14,7 +14,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme.DarkActionBar">
         <activity android:name=".BaseActivity"/>
-        <activity android:name=".login.SignUpActivity"/>
+        <activity android:name=".login.EmailSignUpActivity"/>
         <activity
                 android:name=".splashscreen.SplashScreenActivity"
                 android:theme="@style/AppTheme.NoActionBar">
@@ -24,11 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".login.SignInActivity"/>
+        <activity android:name=".login.EmailSignInActivity"/>
         <activity
                 android:name=".coursedata.CourseDataActivity"
                 android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".login.AuthActivity">
+        <activity android:name=".login.EmailAuthActivity">
         </activity>
     </application>
 

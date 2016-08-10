@@ -4,10 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.widget.AutoCompleteTextView;
-import android.widget.TextView;
 import android.widget.Toast;
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -15,16 +12,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import io.github.angiecho.coursetrack.R;
 
-public class SignUpActivity extends AuthActivity {
+public class EmailSignUpActivity extends EmailAuthActivity {
 
 
-    private static String TAG = SignUpActivity.class.getSimpleName();
-
-    @BindView(R.id.email_field)
-    AutoCompleteTextView emailTextView;
-
-    @BindView(R.id.password_field)
-    TextView passwordTextView;
+    private static String TAG = EmailSignUpActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +26,18 @@ public class SignUpActivity extends AuthActivity {
 
     @OnClick(R.id.email_signin_text)
     public void redirectEmailSignIn() {
-        Intent intent = new Intent(this, SignInActivity.class);
+        Intent intent = new Intent(this, EmailSignInActivity.class);
         startActivity(intent);
     }
 
 
     @OnClick(R.id.email_signup_button)
     public void emailSignUp() {
-        String email = emailTextView.getText().toString();
-        String password = passwordTextView.getText().toString();
-        firebaseEmailSignUp(email, password);
+        String email = getValidEmail();
+        String password = getValidPassword();
+        if(email != null && password != null) {
+            firebaseEmailSignUp(email, password);
+        }
     }
 
     private void firebaseEmailSignUp(String email, String password) {
@@ -58,10 +51,10 @@ public class SignUpActivity extends AuthActivity {
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
-                            Toast.makeText(SignUpActivity.this, "Sign up failed.",
+                            Toast.makeText(EmailSignUpActivity.this, "Sign up failed.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(SignUpActivity.this, "Registration succeeded.",
+                            Toast.makeText(EmailSignUpActivity.this, "Registration succeeded.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }

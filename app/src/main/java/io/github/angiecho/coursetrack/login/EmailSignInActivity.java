@@ -3,10 +3,7 @@ package io.github.angiecho.coursetrack.login;
 import android.support.annotation.NonNull;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.AutoCompleteTextView;
-import android.widget.TextView;
 import android.widget.Toast;
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -14,16 +11,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import io.github.angiecho.coursetrack.R;
 
-public class SignInActivity extends AuthActivity {
+public class EmailSignInActivity extends EmailAuthActivity {
 
-    private static String TAG = SignInActivity.class.getSimpleName();
-
-    @BindView(R.id.email_field)
-    AutoCompleteTextView emailTextView;
-
-    @BindView(R.id.password_field)
-    TextView passwordTextView;
-
+    private static String TAG = EmailSignInActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +29,11 @@ public class SignInActivity extends AuthActivity {
 
     @OnClick(R.id.email_signin_button)
     public void emailSignIn() {
-        String email = emailTextView.getText().toString();
-        String password = passwordTextView.getText().toString();
-        firebaseEmailSignIn(email, password);
+        String email = getValidEmail();
+        String password = getValidPassword();
+        if(email != null && password != null) {
+            firebaseEmailSignIn(email, password);
+        }
     }
 
     private void firebaseEmailSignIn(String email, String password) {
@@ -56,10 +48,10 @@ public class SignInActivity extends AuthActivity {
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
-                            Toast.makeText(SignInActivity.this, "Authentication failed.",
+                            Toast.makeText(EmailSignInActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(SignInActivity.this, "Authentication succeeded.",
+                            Toast.makeText(EmailSignInActivity.this, "Authentication succeeded.",
                                     Toast.LENGTH_SHORT).show();
                         }
                     }
