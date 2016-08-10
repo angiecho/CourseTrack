@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
 import io.github.angiecho.coursetrack.BaseActivity;
 import io.github.angiecho.coursetrack.R;
 
@@ -63,6 +64,10 @@ public class CourseDataActivity extends BaseActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        } else if (id == R.id.action_sign_in) {
+
+        } else if (id == R.id.action_sign_out) {
+
         }
 
         return super.onOptionsItemSelected(item);
