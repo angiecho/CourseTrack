@@ -19,8 +19,7 @@ import io.github.angiecho.coursetrack.BaseActivity;
 import io.github.angiecho.coursetrack.R;
 import io.github.angiecho.coursetrack.login.EmailSignUpActivity;
 
-public class CourseDataActivity extends NavigationDrawerActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class CourseDataActivity extends NavigationDrawerActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
