@@ -23,9 +23,6 @@ public abstract class EmailAuthActivity extends BaseActivity {
 
     private static String TAG = EmailSignUpActivity.class.getSimpleName();
 
-    protected FirebaseAuth mAuth;
-    protected FirebaseAuth.AuthStateListener mAuthListener;
-
     private LoginTaskDelegate loginTaskDelegate;
 
     @BindView(R.id.email_field)
@@ -44,41 +41,7 @@ public abstract class EmailAuthActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mAuth = FirebaseAuth.getInstance();
-
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    // User is signed in
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-
-//                    Intent intent = new Intent(EmailAuthActivity.this, CourseDataActivity.class);
-//                    startActivity(intent);
-                } else {
-                    // User is signed out
-                    Log.d(TAG, "onAuthStateChanged:signed_out");
-                }
-            }
-        };
-
         loginTaskDelegate = new LoginTaskDelegate(this);
-    }
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
-        }
     }
 
     protected String getValidEmail() {
